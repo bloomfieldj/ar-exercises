@@ -8,5 +8,7 @@ require_relative './exercise_6'
 
 puts "Exercise 7"
 puts "----------"
-
-# Your code goes here ...
+puts "Please name your new store!"
+input = gets.chomp
+@storeX = Store.create( name: input )
+@storeX.errors.messages.each { |message| puts message }
